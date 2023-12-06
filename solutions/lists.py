@@ -36,8 +36,10 @@ def is_sublist(list1, list2):
 def rotate_list(my_list, k):
     a = len(my_list) - k
     mer_list = []
-    a = my_list[k:a:1]
-    b = my_list[0:k-1;1]
+    a = my_list[k:a+2:1]
+    print(a)
+    b = my_list[0:k:1]
+
     mer_list = a +b
-    return mer_list    
+    return (mer_list)
     
