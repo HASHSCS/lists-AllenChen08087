@@ -24,22 +24,22 @@ def remove_duplicates(my_list):
 
 # TODO: Implement a function that checks whether a list is a sublist of another list. A sublist is a sequence of consecutive elements that are part of another list
 def is_sublist(list1, list2):
-    flag = True
-    for item in list1:
-        if item in list2:
+    flag = False
+    a = len(list1)
+    b = len(list2)
+    for i in range(b-a+1):
+        if list2[i:i+a] == list1:
             flag = True
-        else:
-            flag = False
+    
     return flag
 
 # TODO: Implement a function that rotates the elements of a list to the right by `k` places. `k` is non-negative
 def rotate_list(my_list, k):
-    a = len(my_list) - k
+    a = len(my_list) 
+    x = a-k
     mer_list = []
-    a = my_list[k:a+2:1]
-    print(a)
-    b = my_list[0:k:1]
-
+    a = my_list[a-k:a+1]
+    b = my_list[0:x]
     mer_list = a +b
     return (mer_list)
     
